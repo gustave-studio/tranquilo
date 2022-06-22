@@ -9,18 +9,21 @@ RSpec.describe StaticPagesController, type: :controller do
       get :home
       expect(response).to have_http_status(200)
       expect(response.body).to include('Ruby on Rails Tutorial Sample App')
+      expect(response.body).to have_title('Home | Ruby on Rails Tutorial Sample App')
     end
 
     it 'homeが表示される' do
       get :help
       expect(response).to have_http_status(200)
       expect(response.body).to include("Help | Ruby on Rails Tutorial Sample App")
+      expect(response.body).to have_title('Help | Ruby on Rails Tutorial Sample App')
     end
 
     it 'homeが表示される' do
       get :about
       expect(response).to have_http_status(200)
       expect(response.body).to include("About | Ruby on Rails Tutorial Sample App")
+      expect(response.body).to have_title('About | Ruby on Rails Tutorial Sample App')
     end
   end
 end
