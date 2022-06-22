@@ -32,6 +32,5 @@ RSpec.describe StaticPagesController, type: :controller do
       expect(response.body).to include("Contact | Ruby on Rails Tutorial Sample App")
       expect(response.body).to have_title('Contact | Ruby on Rails Tutorial Sample App')
     end
-
   end
 end
