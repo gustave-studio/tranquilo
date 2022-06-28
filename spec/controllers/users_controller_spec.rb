@@ -5,9 +5,9 @@ describe 'UsersController', type: :controller do
   it { expect(get: '/signup').to route_to('users#new') }
 
   let(:user) { User.create(name: "Example User",
-                           email: "user@example.com",
-                           password: "foobar",
-                           password_confirmation: "foobar") }
+                        email: "user@example.com",
+                        password: "foobar",
+                        password_confirmation: "foobar") }
 
   describe do
     it { expect(user.valid?).to be(true) }
